@@ -1,0 +1,48 @@
+@media screen and (max-width:414px) {
+    .hm-m1{
+        width: 100vw;
+        height: 100vh;
+    }
+    .hm-h1{
+        width: 330px;
+        display: flex;
+
+    }
+    .hm-img{
+        width: 100%;
+
+    }
+    .hm-m2{
+        position: absolute;
+        top: 14vh;
+    }
+    .matemasie-regular{
+        font-size: 20px;
+
+    }
+
+}
+
+@media screen and (max-width:950px) {
+    .hm-m1{
+        width: 100vw;
+        height: 100vh;
+    }
+    .hm-h1{
+        width: 100vw;
+        display: flex;
+
+    }
+    .hm-img{
+        width: 100%;
+
+    }
+    .hm-m2{
+        position: absolute;
+        top: 24vh;
+    }
+    .matemasie-regular{
+        font-size: 5vh;
+    }
+
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap');
+
+.signin-main{
+   
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    transform: translate(15%,15%);
+    display: flex;
+    font-family: karma;
+}
+
+.sign-f1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+    width: 40vw;
+    margin-left: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    gap:1vh;
+}
+
+.or{
+    position: relative;
+    bottom: 25%;
+}
+
+.sign-f2{
+    display: flex;
+    background-color: yellow;
+    width: 50vw;
+}
+
+.sign-f1 > div > h1{
+    color: orange;
+    font-weight: 800;
+    font-size: larger;
+}
+
+
+.sign-f1 p {
+    font-weight: bold;
+    font-size:medium;
+
+}
+
+/* .sgn_btn{
+    background-color: azure;
+    border-radius: 2vh;
+    width: 50vh;
+    text-align: center;
+    font-size: 3vh;
+    transform: translate(22%,10%);
+    padding: 2px;
+} */
