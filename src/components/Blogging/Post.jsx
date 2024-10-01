@@ -9,7 +9,7 @@ import axios from 'axios';
 
 export default function Post() {
   const [Title, setTitle] = useState('');
-  const [Titlefile, setTitleFile] = useState('');
+  const [image, setTitleFile] = useState('');
   const [filePreview, setFilePreview] = useState('');
   const [QuillContent, setQuillContent] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -105,13 +105,16 @@ export default function Post() {
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
-    if (selectedFile) {
-      setTitleFile(selectedFile.name);  // Save only the file name
+    if (selectedFile && selectedFile.type.startsWith("image/")) {
+      setTitleFile(selectedFile);
       const fileReader = new FileReader();
       fileReader.onload = () => {
         setFilePreview(fileReader.result);
       };
       fileReader.readAsDataURL(selectedFile);
+    }
+    else{
+      alert('upload a valid image please');
     }
   };
 
@@ -120,14 +123,14 @@ export default function Post() {
 
     const formData = new FormData();
       formData.append("Title",Title);
-      formData.append("Titlefile",Titlefile);
+      formData.append("image",image);
       formData.append("QuillContent",QuillContent);
       formData.append("selectedCategories",selectedCategories);
 
 
     // const formData = {
     //   Title,
-    //   Titlefile,  // This will now be the file name
+    //   image,  // This will now be the file name
     //   QuillContent,
     //   selectedCategories
     // }
@@ -182,7 +185,7 @@ export default function Post() {
         <label htmlFor='file' className='items-center cursor-pointer text-4xl'>
           <GrAddCircle className='hover:text-blue-900 duration-300' />
         </label>
-        {Titlefile && (
+        {image && (
           <div className='mt-4'>
             <img src={filePreview} alt='Selected File Preview' className='w-full max-w-xs' />
           </div>

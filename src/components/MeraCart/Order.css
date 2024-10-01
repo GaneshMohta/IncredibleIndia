@@ -1,0 +1,129 @@
+/* Overall container */
+.overall {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* Left section - Cart items */
+  .left {
+    width: 60%;
+  }
+
+
+
+  .container1 {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+  }
+
+  .container1:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .title1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .category1 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .image1 {
+    width: auto;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .price1 {
+    font-size: 20px;
+    color: #27ae60;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .btn1 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .button1 {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button1:hover {
+    background-color: #2980b9;
+  }
+
+  .remove-button {
+    background-color: #e74c3c;
+  }
+
+  .remove-button:hover {
+    background-color: #c0392b;
+  }
+
+  /* Right section - Price details */
+  .right {
+    width: 35%;
+  }
+
+  .bill {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .bill h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .bill hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-bottom: 15px;
+  }
+
+  .inside {
+    margin-bottom: 10px;
+  }
+
+  .inside p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .in {
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 15px;
+    text-align: right;
+  }

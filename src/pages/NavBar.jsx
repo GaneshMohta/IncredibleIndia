@@ -61,12 +61,14 @@ const Navbar = () => {
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
+          <Link to={`${item.Link}`}>
           <li
             key={item.id}
             className='text-white p-2 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
           >
             {item.text}
           </li>
+          </Link>
         ))}
       </ul>
     </div>

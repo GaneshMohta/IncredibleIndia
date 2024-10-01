@@ -68,7 +68,7 @@ export default function MakeIndia() {
   return (
     <div className='h-auto aatulya-body'>
 
-    <div className='aatulya-header flex justify-between p-2 sticky top-0 z-10 items-center'>
+    <div className='aatulya-header flex justify-between p-2 sticky top-0 z-10 items-center bg-slate-300'>
       <div className='flex gap-2'>
       <Link to='/'><span className='text-slate-950 relative top-1'><BsArrowLeftShort/></span></Link>
       <h3>Aatulya Bharat</h3>
@@ -90,74 +90,16 @@ export default function MakeIndia() {
                   {
                   prod.map((product) => (
                     <div key={product.id} className="card1">
-                      <img src={product.image} width={150} alt={product.name} />
-                      <br />
+                      <img src={`http://localhost:3000/uploads/${product.image}`} width={150} alt={product.name} className='mib-prod-img'/>
+
                       <div className="text-center">
-                        <h3>{product.name}</h3>
-                        <p>{product.price}</p>
+                        <h3>{product.productName}</h3>
+                        <p>₹{product.price}</p>
+                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150' onClick={()=>cartAdded(product)}>Add</button>
                       </div>
                     </div>
                   ))
                 }
-                   {/* <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150' onClick={()=>cartAdded("data")}>add</button>
-                        </div>
-                   </div>
-
-                   <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150' onClick={()=>cartAdded("data")}>add</button>
-                        </div>
-                   </div>
-
-                   <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150'>add</button>
-                        </div>
-                   </div>
-
-                   <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150'>add</button>
-                        </div>
-                   </div>
-
-                   <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150'>add</button>
-                        </div>
-                   </div>
-
-                   <div className='card1'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskPHDL6YdaYgZhk5izfXxUvva3cxldEBTHw&s' width={150} />
-                        <br />
-                        <div className='text-center'>
-                        <h3>name</h3>
-                        <p>price</p>
-                        <button className='bg-blue-400 w-10 p-1 rounded-md hover:bg-blue-500 duration-150'>add</button>
-                        </div>
-                   </div> */}
                    </Carousel>
 
 

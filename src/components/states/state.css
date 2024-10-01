@@ -2,3 +2,48 @@
     background-color: whitesmoke;
 }
 
+.maps {
+    background-image: url('https://fairgaze.com/images/UploadedImages/thumbs/0309134_0309134_xasdiihbb.jpg');
+    background-repeat: repeat;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh; /* Ensure the element takes the full viewport height */
+
+    width: auto;
+    z-index: 1;
+  }
+
+  .map-container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .maps {
+
+        background-image: url('https://fairgaze.com/images/UploadedImages/thumbs/0309134_0309134_xasdiihbb.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        position: relative;
+        /*min-height: 1vh; /* Ensure the element takes the full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: auto;
+        z-index: 1;
+      }
+
+  .map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0%;
+    padding-left: 10px;
+  }
+
+  }

@@ -48,9 +48,10 @@ export default function MainBlogs() {
         <Link to='/post' className='text-xl relative left-28 top-5 flex'><IoIosCreate /><span className='text-base'>Write</span></Link>
         </div>
 
-        <div className='flex aatulya-body border-2 border-l-neutral-950'>
-            <div className='w-[70vw] h-auto p-4' style={{height:'auto'}}>
+        <div className='flex aatulya-body border-2'>
+            <div className='w-[70vw] h-auto p-4  border-e-2 ' style={{height:'auto'}}>
             {filterblogs.map((ourblog)=>(
+                <Link to={`/blog/${ourblog.Titleid}`}>
                <div className='h-[30vh] gap-1 bg-zinc-400 flex m-2' key={ourblog.id}>
 
                <div className='w-[70%] p-2'>
@@ -58,12 +59,13 @@ export default function MainBlogs() {
                    <p className='text-sm'>{ourblog.author}</p>
                </div>
                <div className='w-[30%]'>
-                   <img src={`http://localhost:3000/uploads/${ourblog.Titlefile}`} className='h-[80%]' alt='img'/>
+                   <img src={`http://localhost:3000/uploads/${ourblog.image}`} className='h-[80%]' alt='img'/>
                </div>
               </div>
+              </Link>
               ))}
             </div>
-            <hr />
+
             <div className='w-[30vw] sticky top-16 left-0 h-[90vh]'>
             <h1 className='p-2 text-xl ps-4'>Recommended Topics</h1>
             <div className='flex justify-between py-3 flex-wrap gap-5 ps-4 pe-3 '>

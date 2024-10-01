@@ -6,7 +6,7 @@ const blogSchema = mongoose.Schema({
         type:String,
         required:true
     },
-    Titlefile : String,
+    image : String,
     QuillContent : String,
     selectedCategories : [{
         type:String,

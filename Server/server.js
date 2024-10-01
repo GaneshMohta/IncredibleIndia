@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import userRouter from './Routes/userRoutes.js';
 import blogRouter from './Routes/blogRoutes.js';
 import productRouter from './Routes/productRoutes.js'
+import paymentRouter from './Routes/paymentRoutes.js'
 import { fileURLToPath } from 'url';
 import multer from 'multer';
 import path from 'path';
@@ -68,6 +69,7 @@ app.get('/',(req,res)=>{
 app.use('/user',userRouter)
 app.use('/blog',blogRouter)
 app.use('/product',productRouter)
+app.use('/pay',paymentRouter)
 app.listen(3000,()=>{
     console.log("http://localhost:3000");
 })

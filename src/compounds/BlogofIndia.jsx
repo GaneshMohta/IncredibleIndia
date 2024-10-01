@@ -36,7 +36,7 @@ const BlogofIndia = () => {
             blog.map((item) => (
                 <Link to={`blog/${item.id}`} key={item.Titleid}>
                 <div className='card text-center'>
-                <img src={item.Titlefile} alt="image"  className='h-48 w-48 rounded-t-lg'/>
+                <img src={`http://localhost:3000/uploads/${item.image}`} alt="image"  className='h-48 w-48 rounded-t-lg'/>
                 <h3 className='whitespace-nowrap overflow-hidden text-ellipsis pb-0 ps-2 pe-1'>{item.Title}</h3>
                 <span className='text-center font-thin author p-0 relative bottom-2'>{item.author}</span>
                 </div>

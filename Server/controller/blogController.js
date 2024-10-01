@@ -5,8 +5,9 @@ import { uuid } from 'uuidv4';
 
 export const createBlog=async(req,res)=>{
     try{
-      const {Title,Titlefile,QuillContent,selectedCategories} = req.body;
+      const {Title,QuillContent,selectedCategories} = req.body;
       console.log("titlefile,")
+      const image = req.file.filename;
 
       console.log('Request Body:', req.body);
       console.log("data",selectedCategories)
@@ -16,9 +17,8 @@ export const createBlog=async(req,res)=>{
       const blogs = new Blog({
         Titleid:uuid(),
         Title,
-        Titlefile,
+        image,
         QuillContent,
-        selectedCategories,
         selectedCategories,
       })
       await blogs.save();

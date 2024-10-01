@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css';
-import MapIndia from './MapIndia';
+
 import {BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import Rajastan from './components/states/Rajastan';
 import Maharashtra from './components/states/Maharasthra';
@@ -20,6 +20,7 @@ import MainBlogs from './compounds/MainBlogs';
 import Cartpost from './components/MeraCart/Cartpost';
 import OrderCart from './components/MeraCart/OrderCart';
 import Ref from './pages/Ref';
+import MapIndia from './components/states/MapIndia';
 
 
 
@@ -46,7 +47,7 @@ function App() {
         <Routes>
         <Route path='/ref' element={<Ref />}></Route>
         <Route path='/'  element={<HomePage />}></Route>
-          <Route path='/map'  element={<MapIndia  />}></Route>
+          <Route path='/map'  element={<MapIndia/>}></Route>
           <Route path='/Rajasthan'  element={<Rajastan/>}></Route>
           <Route path='/Maharashtra' element={<Maharashtra/>}></Route>
           <Route path='/TamilNadu' element={<TamilNadu/>}></Route>
